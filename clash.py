@@ -37,9 +37,9 @@ for item in list:
     ovpn = str(ovpn,'utf8')
     # text = unquote(ovpn, 'utf-8')
     # text = quote(text, 'utf-8')
-    subscribe += ovpn + "|"
+    subscribe += ovpn + "\r\n"
 
-subscribe = subscribe.strip('|')
+#subscribe = subscribe.strip('|')
 print(subscribe)
 subscribe = base64.b64encode(subscribe.encode())
 subscribe = str(subscribe, 'utf-8')

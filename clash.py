@@ -11,6 +11,9 @@ import git
 
 # warnings.filterwarnings('ignore')
 
+# https://sub.portx.cc/sub?target=clash&url=https%253A%252F%252Fcdn.jsdelivr.net%252Fgh%252Fkakarrot%252Fnodes%252Fovpn&insert=false
+# https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fkakarrot%2Fnodes%2Fovpn
+
 confUrl = "https://api.buliang0.cf/opconf.json"
 
 proxies = {'http': 'http://127.0.0.1:10809', 'https': 'http://127.0.0.1:10809'}
@@ -37,6 +40,10 @@ for item in list:
     subscribe += ovpn + "|"
 
 subscribe = subscribe.strip('|')
+print(subscribe)
+subscribe = base64.b64encode(subscribe.encode())
+subscribe = str(subscribe, 'utf-8')
+print("\n")
 print(subscribe)
 
 # 写入cyou文件，并且commit到git

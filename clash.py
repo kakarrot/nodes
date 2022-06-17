@@ -55,7 +55,7 @@ def pushToGit(subscribe):
     repo.index.commit('update ovpn content')
     repo.remote().push()
 
-schedule.every(1).minutes.do(createSubscribe)
+schedule.every(5).minutes.do(createSubscribe)
 
 while True:
     schedule.run_pending()
